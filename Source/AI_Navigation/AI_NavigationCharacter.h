@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
-#include "AI_Navagation_UnRealCharacter.generated.h"
+#include "AI_NavigationCharacter.generated.h"
 
 class USpringArmComponent;
 class UCameraComponent;
@@ -16,7 +16,7 @@ struct FInputActionValue;
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
 UCLASS(config=Game)
-class AAI_Navagation_UnRealCharacter : public ACharacter
+class AAI_NavigationCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
@@ -45,7 +45,7 @@ class AAI_Navagation_UnRealCharacter : public ACharacter
 	UInputAction* LookAction;
 
 public:
-	AAI_Navagation_UnRealCharacter();
+	AAI_NavigationCharacter();
 	
 
 protected:
