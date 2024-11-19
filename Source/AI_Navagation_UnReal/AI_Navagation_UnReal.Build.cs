@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class AI_Navigation_Unreal : ModuleRules
+public class AI_Navagation_UnReal : ModuleRules
 {
-	public AI_Navigation_Unreal(ReadOnlyTargetRules Target) : base(Target)
+	public AI_Navagation_UnReal(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 

@@ -4,15 +4,15 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "AI_Navigation_UnrealGameMode.generated.h"
+#include "AI_Navagation_UnRealGameMode.generated.h"
 
 UCLASS(minimalapi)
-class AAI_Navigation_UnrealGameMode : public AGameModeBase
+class AAI_Navagation_UnRealGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
 public:
-	AAI_Navigation_UnrealGameMode();
+	AAI_Navagation_UnRealGameMode();
 };
 
 

@@ -3,13 +3,13 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class AI_Navigation_UnrealTarget : TargetRules
+public class AI_Navagation_UnRealEditorTarget : TargetRules
 {
-	public AI_Navigation_UnrealTarget(TargetInfo Target) : base(Target)
+	public AI_Navagation_UnRealEditorTarget(TargetInfo Target) : base(Target)
 	{
-		Type = TargetType.Game;
+		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_4;
-		ExtraModuleNames.Add("AI_Navigation_Unreal");
+		ExtraModuleNames.Add("AI_Navagation_UnReal");
 	}
 }

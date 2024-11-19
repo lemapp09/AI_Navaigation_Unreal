@@ -5,7 +5,7 @@
 	"Description": "",
 	"Modules": [
 		{
-			"Name": "AI_Navigation_Unreal",
+			"Name": "AI_Navagation_UnReal",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}

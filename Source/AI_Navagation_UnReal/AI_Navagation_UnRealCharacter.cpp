@@ -1,6 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "AI_Navigation_UnrealCharacter.h"
+#include "AI_Navagation_UnRealCharacter.h"
 #include "Engine/LocalPlayer.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -14,9 +14,9 @@
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
 //////////////////////////////////////////////////////////////////////////
-// AAI_Navigation_UnrealCharacter
+// AAI_Navagation_UnRealCharacter
 
-AAI_Navigation_UnrealCharacter::AAI_Navigation_UnrealCharacter()
+AAI_Navagation_UnRealCharacter::AAI_Navagation_UnRealCharacter()
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
@@ -54,7 +54,7 @@ AAI_Navigation_UnrealCharacter::AAI_Navigation_UnrealCharacter()
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 }
 
-void AAI_Navigation_UnrealCharacter::BeginPlay()
+void AAI_Navagation_UnRealCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
@@ -63,7 +63,7 @@ void AAI_Navigation_UnrealCharacter::BeginPlay()
 //////////////////////////////////////////////////////////////////////////
 // Input
 
-void AAI_Navigation_UnrealCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void AAI_Navagation_UnRealCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	// Add Input Mapping Context
 	if (APlayerController* PlayerController = Cast<APlayerController>(GetController()))
@@ -82,10 +82,10 @@ void AAI_Navigation_UnrealCharacter::SetupPlayerInputComponent(UInputComponent* 
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 
 		// Moving
-		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AAI_Navigation_UnrealCharacter::Move);
+		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AAI_Navagation_UnRealCharacter::Move);
 
 		// Looking
-		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AAI_Navigation_UnrealCharacter::Look);
+		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AAI_Navagation_UnRealCharacter::Look);
 	}
 	else
 	{
@@ -93,7 +93,7 @@ void AAI_Navigation_UnrealCharacter::SetupPlayerInputComponent(UInputComponent* 
 	}
 }
 
-void AAI_Navigation_UnrealCharacter::Move(const FInputActionValue& Value)
+void AAI_Navagation_UnRealCharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
@@ -116,7 +116,7 @@ void AAI_Navigation_UnrealCharacter::Move(const FInputActionValue& Value)
 	}
 }
 
-void AAI_Navigation_UnrealCharacter::Look(const FInputActionValue& Value)
+void AAI_Navagation_UnRealCharacter::Look(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D LookAxisVector = Value.Get<FVector2D>();
